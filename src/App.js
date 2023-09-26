@@ -5,21 +5,26 @@ import Offers from "./pages/Offers";
 import ForgotPassword from "./pages/ForgotPassword";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Header from "./components/Header";
+
 
 
 function App() {
   return (
-    <Router>
-       <Routes>
-       <Route path="/" element={<Home/>}/>
-       <Route path="/profiles" element={<Profile/>}/>
-       <Route path="/offers" element={<Offers/>}/>
-       <Route path="/forgot-password" element={<ForgotPassword/>}/>
-       <Route path="/sign-in" element={<SignIn/>}/>
-       <Route path="/sign-up" element={<SignUp/>}/>
+    <>
+        <Router>
+          <Header/>
+          <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/profiles" element={<Profile/>}/>
+          <Route path="/offers" element={<Offers/>}/>
+          <Route path="/forgot-password" element={<ForgotPassword/>}/>
+          <Route path="/sign-in" element={<SignIn/>}/>
+          <Route path="/sign-up" element={<SignUp/>}/>
 
-      </Routes>
-    </Router>
+          </Routes>
+        </Router>
+    </>
   
   );
 }
